@@ -12,6 +12,9 @@ export async function POST(request: NextRequest) {
     if(user){
        return NextResponse.json({message:"User already exists"}, {status:400})
     }
+    if(password.length < 6){
+        return NextResponse.json({message:"Password must be at least 6 characters"}, {status:400})
+    }
     const hashpassword = await bcrypt.hash(password, 10);
     user = new User({
         name,
