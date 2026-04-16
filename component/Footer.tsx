@@ -1,8 +1,12 @@
-import React from 'react'
+
+import { div } from 'motion/react-client'
+import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+   <div>
+    
+   </div>
   )
 }
 
